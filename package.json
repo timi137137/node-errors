@@ -1,0 +1,58 @@
+{
+  "name": "@timi137/errors",
+  "version": "1.0.0",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "**/*.mjs",
+    "**/*.d.mts"
+  ],
+  "sideEffects": [
+    "dist/*"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timi137137/node-errors"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint --ext .js,.ts ./",
+    "lint:fix": "eslint --ext .js,.ts ./ --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^24.0.1",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.2.0",
+    "tsdown": "^0.12.7",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0",
+    "lodash": "^4.17.21",
+    "pony-cause": "^2.1.11",
+    "vitest": "^3.2.3"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": "^22.16.0 || >=24.2.0",
+    "pnpm": "^10.11.0"
+  },
+  "engineStrict": true,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./create-error": "./dist/create-error.mjs",
+    "./definition": "./dist/definition.mjs",
+    "./service-error": "./dist/service-error.mjs",
+    "./*": "./*"
+  }
+}
