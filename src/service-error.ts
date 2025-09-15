@@ -59,7 +59,7 @@ export class ServiceError extends Error {
   }
 
   public static fromError(error: Error): ServiceError {
-    return new ServiceError('COMMON_UNKNOWN', '未知错误', {
+    return new ServiceError('UNKNOWN', '未知错误', {
       causedBy: error,
     });
   }
